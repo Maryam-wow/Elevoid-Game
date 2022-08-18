@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0baf50b0e27287443b619aa30be1aed7, type: 3}
+  m_Name: CharacterQuiz
+  m_EditorClassIdentifier: 
+  questions:
+  - question: Your biggest strength
+    answers:
+    - answerText: Faith
+      charactersValue: 0
+    - answerText: Courage
+      charactersValue: 3
+    - answerText: Calmness
+      charactersValue: 1
+    - answerText: Endurance
+      charactersValue: 2
+  - question: Heading back to village with after a good hunting trip, you find that
+      while you were away, the village is under attack by a monster! What will you
+      do?
+    answers:
+    - answerText: Lure the beast away from the village
+      charactersValue: 2
+    - answerText: Continue moving to the village to look for your family and friends.
+      charactersValue: 0
+    - answerText: Try to attack the beast head on
+      charactersValue: 3
+    - answerText: 'Hide in the forest and observe the attack from a vantage point.  '
+      charactersValue: 1
+  - question: "You come across a strange animal in the forest, it is severly wounded
+      and trapped in a hunter\u2019s snare"
+    answers:
+    - answerText: Give them medicinal herbs for pain relief and leave.
+      charactersValue: 2
+    - answerText: Move on and away with your trip. It might attract dangerous animals.
+      charactersValue: 2
+    - answerText: Draw your dagger, mercifully ending its life.
+      charactersValue: 3
+    - answerText: Try to remove the snare, amputate and heal the wound
+      charactersValue: 1
+  - question: Which form of martial art would you practice?
+    answers:
+    - answerText: Muay Thai (pure attack, every part of the body is a weapon)
+      charactersValue: 2
+    - answerText: Karate(strong attacks from rigid postures)
+      charactersValue: 2
+    - answerText: Tai Chi (Most power comes when using opponents energy against them)
+      charactersValue: 3
+    - answerText: Ninjutsu (concealed attacks, agility in mind and body)
+      charactersValue: 1
+  - question: Which emotion is hardest for you to control?
+    answers:
+    - answerText: Love
+      charactersValue: 0
+    - answerText: Curiosity
+      charactersValue: 3
+    - answerText: Pride
+      charactersValue: 3
+    - answerText: Anger
+      charactersValue: 2
+  - question: You've been given an empty land. What do you do with it?
+    answers:
+    - answerText: Turn it into my training arena!
+      charactersValue: 1
+    - answerText: Hold on to it as it will be valuable in the future
+      charactersValue: 2
+    - answerText: Grow a garden there and stare at the sky
+      charactersValue: 0
+    - answerText: 'A new hotspot for my people to hangout '
+      charactersValue: 3
+  - question: Describe your inner world.
+    answers:
+    - answerText: Remote mountains
+      charactersValue: 2
+    - answerText: Sea,lakes, rivers
+      charactersValue: 0
+    - answerText: Forests or woodlands
+      charactersValue: 1
+    - answerText: Anywhere and everywhere, as long as the sun shines.
+      charactersValue: 3
+  - question: Your greatest set of gifts to your world
+    answers:
+    - answerText: Imagining, thinking, and communicating
+      charactersValue: 2
+    - answerText: Generosity, intuition and harmony
+      charactersValue: 0
+    - answerText: initiating, inspiring, and causing excitement.
+      charactersValue: 3
+    - answerText: Practicality, preserving, and containing
+      charactersValue: 1
+  - question: Choose travel mode
+    answers:
+    - answerText: Cruise ship
+      charactersValue: 0
+    - answerText: Airplane
+      charactersValue: 2
+    - answerText: Bicycling/backpacking
+      charactersValue: 1
+    - answerText: Train
+      charactersValue: 3
+  - question: Choose an outdoor activity
+    answers:
+    - answerText: Tending a garden
+      charactersValue: 1
+    - answerText: Sitting by a campfire
+      charactersValue: 3
+    - answerText: Kayaking
+      charactersValue: 3
+    - answerText: Hiking high otothe tip of a montain.
+      charactersValue: 2

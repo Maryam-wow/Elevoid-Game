@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/Main.unity
+    guid: 08f5272cee1991a429ca0a022a88614b
+  - enabled: 0
+    path: Assets/_Scripts/PackagesConnection/Gameplay 2.unity
+    guid: 8f0f906e95dce48bcad2a71aa07983fe
+  - enabled: 0
+    path: Assets/_Scenes/NonAR.unity
+    guid: 78bea6b9a11754866812dc4e8e420192
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/_Scenes/TRY 3.unity
+    guid: 31a4ccee23c37464babfb57755ac49fb
+  - enabled: 0
+    path: Assets/_Scenes/TRY 2.unity
+    guid: 9137ed49d1638412fb12747c5a459f7b
+  - enabled: 1
+    path: Assets/_Scenes/AR.unity
+    guid: 51b298697098a46f8afeb670ea1f9a10
+  m_configObjects:
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e6f1b263c34a34b4b8e7cfbff488c92e,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ba7432bb1dc714e85816bbb1ed221d48,
+      type: 2}
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: c2f7b8d7c0bff4d10874cbcf3f24af78,
+      type: 2}
+    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: b27ec7d82a91a48e69fd689ad6808e5e,
+      type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: a19dc428fc80b4e24b02ec9d5ea18c9e,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fb77d526c12194f8b8d58f273e1eff4e,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e4244d7d4e2074cbb91553badb69d7f1,
+      type: 2}
