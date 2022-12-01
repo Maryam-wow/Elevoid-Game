@@ -16,7 +16,7 @@ public class CharacterWaterControl : MonoBehaviour
     [SerializeField] Animator _Anim;
 
     [SerializeField] WaterBallControll waterBallController;
-    [SerializeField] WaterBender waterBenderController;
+    //[SerializeField] WaterBender waterBenderController;
     [SerializeField] WaterTubeController waterTubeController;
     [SerializeField] float _TurnSpeed;
     Vector3 waterBallTarget;
@@ -25,37 +25,37 @@ public class CharacterWaterControl : MonoBehaviour
     public GameObject explodeEffect;
     private int damage = 5;
     private bool hasWaterFired = false;
-   // private AudioSource PlayerWaterAttack;
+    public AudioSource PlayerWaterAttack1;
 
     private void Update()
     {
-        if (CrossPlatformInputManager.GetButtonDown("P"))
+        if (CrossPlatformInputManager.GetButtonDown("Att1"))
         {
             if (hasWaterFired == false)
                 StopAllCoroutines();
             StartCoroutine(Coroutine_WaterBall());
             //WaterBallHitCheck();
-            //PlayerWaterAttack.Play();
+            //PlayerWaterAttack1.Play();
         }
-        if (CrossPlatformInputManager.GetButtonDown("L"))
-        {
-            if (hasWaterFired == false)
-                StopAllCoroutines();
-            StartCoroutine(Coroutine_WaterBend());
+        //if (CrossPlatformInputManager.GetButtonDown("Att2"))
+        //{
+        //    if (hasWaterFired == false)
+         //       StopAllCoroutines();
+         //   StartCoroutine(Coroutine_WaterBend());
             //WaterBallHitCheck();
-            //PlayerWaterAttack.Play();
-        }
-        if (CrossPlatformInputManager.GetButtonDown("S"))
+            //PlayerWaterAttack1.Play();
+        //}
+        if (CrossPlatformInputManager.GetButtonDown("Att3"))
         {
             if (hasWaterFired == false)
                 StopAllCoroutines();
             StartCoroutine(Coroutine_WaterTube());
-            // WaterBallHitCheck();
-            //PlayerWaterAttack.Play();
+            //WaterBallHitCheck();
+            //PlayerWaterAttack1.Play();
         }
- 
 
-    IEnumerator Coroutine_WaterBall()
+
+        IEnumerator Coroutine_WaterBall()
     {
         while (true)
         {
@@ -113,39 +113,39 @@ public class CharacterWaterControl : MonoBehaviour
         }
     }
 
-    IEnumerator Coroutine_WaterBend()
-    {
-        while (true)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                yield return StartCoroutine(Coroutine_Turn());
-                gameObject.GetComponent<AudioSource>().Play();
-                if (Physics.Raycast(ray, out hit))
-                {
-                    waterBendTarget = hit.point;
-                    _Anim.SetTrigger("WaterBend");
-                    if (hit.collider.CompareTag("Enemy22"))
-                    {
-                        Debug.Log("HIT : " + damage);
-                        hit.collider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
-                    }
-                    else
-                    {
-                        Debug.Log("MISS");
-                    }
-                }
-            }
-            yield return null;
-        }
-    }
+    //IEnumerator Coroutine_WaterBend()
+    //{
+    //    while (true)
+    //    {
+     //       if (Input.GetMouseButtonDown(0))
+       //     {
+       //         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+       //         RaycastHit hit;
+        //        yield return StartCoroutine(Coroutine_Turn());
+        //        gameObject.GetComponent<AudioSource>().Play();
+        //        if (Physics.Raycast(ray, out hit))
+        //        {
+        //            waterBendTarget = hit.point;
+        //            _Anim.SetTrigger("WaterBend");
+        //            if (hit.collider.CompareTag("Enemy22"))
+         //           {
+         //               Debug.Log("HIT : " + damage);
+        //                hit.collider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
+        //            }
+        //            else
+        //            {
+         //               Debug.Log("MISS");
+         //           }
+         //       }
+         //   }
+            //yield return null;
+        //}
+   // }
 
-    private void AnimationCallback_WaterBend()
-    {
-        waterBenderController.Attack(waterBendTarget);
-    }
+    //private void AnimationCallback_WaterBend()
+    //{
+     //   waterBenderController.Attack(waterBendTarget);
+    //}
 
     IEnumerator Coroutine_WaterTube()
     {

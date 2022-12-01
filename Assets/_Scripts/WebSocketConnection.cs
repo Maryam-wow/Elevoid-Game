@@ -54,7 +54,7 @@ public class WebSocketConnection : MonoBehaviour
     {
         print("Connection opened");
         GameManager.Instance.OnServerConnectionOpened();
-       // Invoke("SendPlayerJoinedPackage", 0f);
+        // Invoke("SendPlayerJoinedPackage", 0f);
     }
 
     private void OnMessage(byte[] inboundBytes)
@@ -102,7 +102,7 @@ public class WebSocketConnection : MonoBehaviour
                     // Received PlayerMovedPackage
                     print($"Received PlayerMovedPackage");
                     PlayerMovedPackage playerMovedPackage = JsonUtility.FromJson<PlayerMovedPackage>(inboundString);
-                    GameManager.Instance.DidReceivePlayerMovedPackage(playerMovedPackage);
+                   // GameManager.Instance.DidReceivePlayerMovedPackage(playerMovedPackage);
                 }
                 else if (json["packageType"].Value == "PlayerShotPackage")
                 {
@@ -188,26 +188,24 @@ public class WebSocketConnection : MonoBehaviour
             await _webSocket.Send(bytes);
         }
     }
-    //////////////////////////////////
-    // Helper Methods
-    //////////////////////////////////
-
-  //  private async void SendPlayerJoinedPackage()
-    //{
-    //    float CurrentpositionX = 2f;
-      //  float CurrentpositionY = 2f;
-
-      //  float CurrentpositionZ = 2f;
-     //   int id = 222;
-     //  PlayerPackage playerPackage = new PlayerPackage(id, CurrentpositionX, CurrentpositionY, CurrentpositionZ);
-
-       // if (_webSocket.State == WebSocketState.Open)
-
-       // {
-         //   string json = JsonUtility.ToJson(playerPackage);
-          //  byte[] bytes = Encoding.UTF8.GetBytes(json);
-          //  await _webSocket.Send(bytes);
-        //}
-   // }
 }
+//////////////////////////////////
+// Helper Methods
+//////////////////////////////////
 
+//  private async void SendPlayerJoinedPackage()
+//{
+//    float CurrentpositionX = 2f;
+//  float CurrentpositionY = 2f;
+
+//  float CurrentpositionZ = 2f;
+//   int id = 222;
+//  PlayerPackage playerPackage = new PlayerPackage(id, CurrentpositionX, CurrentpositionY, CurrentpositionZ);
+
+// if (_webSocket.State == WebSocketState.Open)
+
+// {
+//   string json = JsonUtility.ToJson(playerPackage);
+//  byte[] bytes = Encoding.UTF8.GetBytes(json);
+//  await _webSocket.Send(bytes);
+//}

@@ -1383,7 +1383,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _webSocket: {fileID: 1207146944}
-  playerPrefab: {fileID: 8008071671859123046, guid: e0c68f5d2824845d4aa2e21cbe23b762,
+  playerPrefabWater: {fileID: 8008071671859123046, guid: e0c68f5d2824845d4aa2e21cbe23b762,
+    type: 3}
+  playerPrefabAir: {fileID: 919132149155446097, guid: 552a40b68c63342b4bba533980819a60,
     type: 3}
   charactersInfo:
   - {fileID: 11400000, guid: 176d3eaf8d60f2a48adc6ca812ceb215, type: 2}

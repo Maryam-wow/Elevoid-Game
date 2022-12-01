@@ -21,10 +21,10 @@ public void PlayerTakeDamage(int damageAmount)
     playerHealth = playerHealth - damageAmount;
     healthBar.SetHealth(playerHealth);
 
-        if (playerHealth <= 0)
-    {
-        Destroy(gameObject);
-    }
+       // if (playerHealth <= 0)
+   // {
+        //Destroy(gameObject);
+    //}
 }
 }
 

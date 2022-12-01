@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e09c6e40a625440478f53c765d3ec605
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _CreationPoint: {fileID: 9053538125477414032, guid: aa9f73e154bc645b2a22d152637e85a9,
+      type: 3}
+  - _WaterTubePrefab: {fileID: 919132149155446097, guid: 97cfc3af9fca06541816cd1f60bbc153,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

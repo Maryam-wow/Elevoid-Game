@@ -2,24 +2,33 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: OBS_Mat
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP
+  m_Shader: {fileID: -6465566751694194690, guid: 2eb2452cb63c1484f8c41ca162eaa76f,
+    type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_df814fb1718447f4b430f7939cffe52f:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_ec98d4cc965840bca2bbd19bbe3bcaa2:
+        m_Texture: {fileID: 2800000, guid: 1b144d38caf89b047936f31afb09ca0f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 7140a9bc83a12ea49a081dda89216fff, type: 3}
         m_Scale: {x: 3, y: 2.5}
@@ -78,6 +87,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Vector1_30c2129fc1b14cacae4c5402852fa917: 0
+    - Vector1_37b76b9c07d44458b9429b61f50a34f5: 0.7
+    - Vector1_8614bb1a761745dbb2966a762489c4ff: 7
+    - Vector1_ab5bbc78aace46cca47c976624c57654: 0.01
+    - Vector1_ca96e47f336c4f3e94f6e18dd5768814: 0
+    - Vector1_cdc7ed99026b45b2b6defe364c7cf018: 0
+    - Vector1_ddb6293edce643b0ad001ef8e4bfe970: 0
+    - Vector1_f64f7fc51f514d1fa0c302cd1c54ace5: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -96,6 +113,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 1

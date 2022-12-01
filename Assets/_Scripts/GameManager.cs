@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
     //int yourPlayerid;
     int score;
     public WebSocketConnection _webSocket;
-    public GameObject playerPrefab;
-
+    public GameObject playerPrefabWater;
+    //public GameObject playerPrefabAir;
     private PlayerPackage _player;
     private Game _game;
     private GameObject _playerGameObject;
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         _game.players.Add(_player);
 
         // Instantiate the Player's GameObject
-        _playerGameObject = Instantiate(playerPrefab, _player.currentPosition, Quaternion.identity);
+        _playerGameObject = Instantiate(playerPrefabWater, _player.currentPosition, Quaternion.identity);
         print("Player GameObject created: " + _playerGameObject);
 
         // Store GameObject reference in dictionary
@@ -177,10 +177,10 @@ public class GameManager : MonoBehaviour
     //Load Scene//
     // }
 
-    void OnApplicationQuit()
-    {
-        _webSocket.DisconnectFromServer();
-    }
+  //void OnApplicationQuit()
+   //{
+     //   _webSocket.DisconnectFromServer();
+   // }
 
 
 
@@ -271,7 +271,7 @@ public class GameManager : MonoBehaviour
         // Then create a GameObject for new player & update the playerGameObjects dictionary & _game Game accordingly 
         foreach (PlayerPackage newPlayer in newPlayers)
         {
-            GameObject newPlayerGameObject = Instantiate(playerPrefab, newPlayer.currentPosition, Quaternion.identity);
+            GameObject newPlayerGameObject = Instantiate(playerPrefabWater, newPlayer.currentPosition, Quaternion.identity);
             _playerGameObjects.Add(newPlayer.id, newPlayerGameObject);
             _game.players.Add(newPlayer);
         }
@@ -340,10 +340,10 @@ public class GameManager : MonoBehaviour
         _webSocket.SendGameUpdatePackage(_game);
     }
 
-    public void DidReceivePlayerMovedPackage(PlayerMovedPackage package)
-    {
-        UpdatePlayerPosition(package.player);
-    }
+    //public void DidReceivePlayerMovedPackage(PlayerMovedPackage package)
+    //{
+    //    UpdatePlayerPosition(package.player);
+    //}
 
     public void DidReceivePlayerShotPackage(PlayerShotPackage package)
     {

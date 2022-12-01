@@ -15,19 +15,26 @@ MonoBehaviour:
   version: 5
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SplashMat
-  m_Shader: {fileID: -6465566751694194690, guid: 759f700544e79a045b892ae338ba5e74, type: 3}
-  m_ShaderKeywords: _ALPHATEST_ON _NORMALMAP _SPECULAR_COLOR
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _DETAIL_MULX2
+  - _NORMALMAP
+  - _SPECULARHIGHLIGHTS_OFF
+  - _SPECULAR_SETUP
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -45,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1e5ed5259b395c84fa21e5c63dbacad7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
@@ -114,14 +121,14 @@ Material:
     - _ClearCoatSmoothness: 0
     - _ColorMode: 0
     - _Cull: 0
-    - _Cutoff: 0.293
+    - _Cutoff: 0.402
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0.1
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _FlipbookBlending: 0
     - _FlipbookMode: 0
@@ -142,18 +149,20 @@ Material:
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 0
-    - _SrcBlend: 5
-    - _Surface: 1
-    - _WorkflowMode: 1
-    - _ZWrite: 0
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _WorkflowMode: 0
+    - _ZWrite: 1
     m_Colors:
-    - Color_b8e9b99e5889460f92aebf9bc0057880: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0}
-    - Color_dec2e6edfde948c1a312273dfe7372d6: {r: 1, g: 1, b: 1, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - Color_b8e9b99e5889460f92aebf9bc0057880: {r: 0.8113208, g: 0.76784015, b: 0.54725885,
+        a: 0}
+    - Color_dec2e6edfde948c1a312273dfe7372d6: {r: 0.9433962, g: 0.9144558, b: 0.6719473,
+        a: 1}
+    - _BaseColor: {r: 0.94900656, g: 0.9528302, b: 0.6966447, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.94900656, g: 0.9528302, b: 0.6966447, a: 1}
     - _EmissionColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0.711}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 0.711}
   m_BuildTextureStacks: []

@@ -15,15 +15,15 @@ public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
     Vector3 move;
 
     bool walk;
-   // void Start()
-   // {
-        
+    // void Start()
+    // {
+
     //}
-   // void Awake()
+    // void Awake()
     //{
-        // PlayerRef = GameObject.Find("Void)");
-        //GameObject[] PlayerRef;
-   // }
+    // PlayerRef = GameObject.Find("Void)");
+    //GameObject[] PlayerRef;
+    // }
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -61,7 +61,7 @@ public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
         while (true)
         {
             GameObject playerGameObject = GameManager.Instance.GetPlayerGameObject();
-           
+
             if (move != Vector3.zero)
             {
                 playerGameObject.transform.rotation = Quaternion.Slerp
@@ -76,5 +76,3 @@ public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
     }
 
 }
-
-

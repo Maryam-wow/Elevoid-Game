@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8fed16a44d67e0f4ea8d90dae4605f75
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _Spline: {instanceID: 0}
+  - _ContortAlong: {instanceID: 0}
+  - _PuddleParticle: {fileID: 178057047381716310, guid: 31eef70b20e66496bbdfb31ce46eae2b,
+      type: 3}
+  - _SplashParticle: {fileID: 3667645344633002872, guid: 0ad2f89ebfc50bd43a76aea980f28b22,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
