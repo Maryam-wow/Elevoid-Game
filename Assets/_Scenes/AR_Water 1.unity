@@ -2172,6 +2172,8 @@ MonoBehaviour:
   - {fileID: 8745398238928116450, guid: 7adcc73a393334611aad62098da9d936, type: 3}
   - {fileID: 8745398238928116450, guid: b69f923e07b794d96803ce2b7d4861d6, type: 3}
   - {fileID: 8745398238928116450, guid: a5f1a0e261ae0453ebad9fdb222d81a6, type: 3}
+  enemySpawnDelay: 1
+  enemyLimit: 3
 --- !u!4 &1191033178
 Transform:
   m_ObjectHideFlags: 0
@@ -2940,6 +2942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773409573894594011, guid: cb0de3c96e35d42f4b7903df8b50c334,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0de3c96e35d42f4b7903df8b50c334, type: 3}

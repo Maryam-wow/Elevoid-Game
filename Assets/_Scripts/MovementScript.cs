@@ -15,6 +15,9 @@ public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
     Vector3 move;
 
     bool walk;
+
+    private Coroutine _moveCo;
+    
     // void Start()
     // {
 
@@ -44,14 +47,16 @@ public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
     public void OnPointerDown(PointerEventData eventData)
     {
         // do the movement when touched down
-        StartCoroutine(PlayerMovement());
+        _moveCo = StartCoroutine(PlayerMovement());
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         transform.localPosition = Vector3.zero; // joystick returns to mean pos when not touched
         move = Vector3.zero;
-        StopCoroutine(PlayerMovement());
+        
+        if (_moveCo != null) StopCoroutine(_moveCo);
+        
         walk = false;
         playerGameObject.GetComponent<Animator>().SetBool("walk", false);
     }
@@ -68,9 +73,10 @@ public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
                         (playerGameObject.transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 5.0f);
             }
 
-            GameManager.Instance.DidReceiveMoveInput(move);
+            
+            GameManager.Instance.DidReceiveMoveInput(move, moveSpeed);
 
-            yield return null;
+            yield return new WaitForEndOfFrame();
 
         }
     }

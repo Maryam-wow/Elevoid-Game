@@ -42,11 +42,12 @@ public class WaterBallControll : MonoBehaviour
     }
     public void CreateWaterBall()
     {
-        waterBall = Instantiate(WaterBallPrefab, _CreationPoint.position, Quaternion.identity);
+        waterBall = Instantiate(WaterBallPrefab, _CreationPoint.position, Quaternion.identity, transform);
     }
 
     public void ThrowWaterBall(Vector3 pos)
     {
         waterBall.Throw(pos);
+        waterBall.transform.SetParent(null);
     }
 }

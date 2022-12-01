@@ -201,10 +201,8 @@ public class GameManager : MonoBehaviour
     //Send playerupdatepackagetoserver
     // }
 
-    public void DidReceiveMoveInput(Vector3 newPosition)
+    public void DidReceiveMoveInput(Vector3 newPosition, float moveSpeed)
     {
-        float moveSpeed = 0.2f;
-
         // Update the player's position based on input
         //_player.currentPosition = newPosition;
         //_playerGameObjects[_player.id].transform.position = newPosition;

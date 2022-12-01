@@ -6,31 +6,40 @@ public class ControllerGhosts : MonoBehaviour
 {
     public Transform[] SpawnPoints;
     public GameObject[] ghost;
-    public static int enemyCount;
-    public static int enemyLimit;
 
- 
- 
+    public int enemySpawnDelay = 10;
+    public int enemyLimit = 3;
 
-// Start is called before the first frame update
-void Start()
+    private int _enemyCount;
+    
+
+    // Update is called once per frame
+    void Start()
     {
         StartCoroutine(StartSpawning());
     }
 
-    IEnumerator StartSpawning() {
-        yield return new WaitForSeconds(20);
-        for (int i =0; i< 3; i++) {
-            Instantiate(ghost[i], SpawnPoints[i].position, Quaternion.identity);
-}
-
+    // *BEWARE* it will create multiple instances of the coroutine, so handle it explicitly.
+    // Update is called once per frame
+    // void Update()
+    // {
+    //     if (_enemyCount < enemyLimit) StartCoroutine(StartSpawning());
+    // }
+    
+    IEnumerator StartSpawning()
+    {
+        yield return new WaitForSeconds(enemySpawnDelay);
+        SpawnEnemies();
     }
-
-// Update is called once per frame
-void Update()
-{
-            if (enemyCount < enemyLimit)
-            StartCoroutine(StartSpawning());
-
+    
+    /// <summary>
+    /// Spawns the enemies of the ghost prefab upto the amount provided.
+    /// </summary>
+    /// <param name="numberToSpawn">the amount of enemies to spawn</param>
+    void SpawnEnemies(int numberToSpawn = 3)
+    {
+        for (int i =0; i < numberToSpawn; i++) {
+            Instantiate(ghost[i], SpawnPoints[i].position, Quaternion.identity);
+        }
     }
 }
