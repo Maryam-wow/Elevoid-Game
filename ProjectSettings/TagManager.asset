@@ -10,6 +10,7 @@ TagManager:
   - ghost
   - Fire1
   - Enemy22
+  - Tower
   layers:
   - Default
   - TransparentFX

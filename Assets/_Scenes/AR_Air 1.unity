@@ -650,7 +650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &465062094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1392,6 +1392,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.16862746
       objectReference: {fileID: 0}
+    - target: {fileID: 6773409573894594011, guid: cb0de3c96e35d42f4b7903df8b50c334,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0de3c96e35d42f4b7903df8b50c334, type: 3}
 --- !u!1 &752930765
@@ -1535,6 +1540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaterTubeAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669747024550472268, guid: e9dcb490ba7cc424aa3bd8a3ea78f80b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9dcb490ba7cc424aa3bd8a3ea78f80b, type: 3}
@@ -2909,6 +2919,8 @@ MonoBehaviour:
   - {fileID: 1978617341}
   - {fileID: 1978617341}
   - {fileID: 1978617341}
+  enemySpawnDelay: 10
+  enemyLimit: 3
 --- !u!4 &1452032941
 Transform:
   m_ObjectHideFlags: 0
@@ -3383,6 +3395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaterSplineController
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457344804642086254, guid: 6d4e65e9c23354069b8770d8cceaada0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d4e65e9c23354069b8770d8cceaada0, type: 3}

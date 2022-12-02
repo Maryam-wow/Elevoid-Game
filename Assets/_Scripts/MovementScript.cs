@@ -73,7 +73,6 @@ public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IP
                         (playerGameObject.transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 5.0f);
             }
 
-            
             GameManager.Instance.DidReceiveMoveInput(move, moveSpeed);
 
             yield return new WaitForEndOfFrame();
