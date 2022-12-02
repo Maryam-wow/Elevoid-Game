@@ -1,8 +1,8 @@
 Library/
 Logs/
 Temp/
+UserSettings/
 .idea/
 .vsconfig
 *.csproj
 *.sln
-InitCodeMarker
