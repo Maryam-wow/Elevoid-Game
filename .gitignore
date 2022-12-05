@@ -6,3 +6,5 @@ UserSettings/
 .vsconfig
 *.csproj
 *.sln
+.vs/
+obj/
