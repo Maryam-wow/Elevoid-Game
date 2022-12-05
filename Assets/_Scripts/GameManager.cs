@@ -41,6 +41,11 @@ public class GameManager : MonoBehaviour
 
     public int selectedCharacter;
 
+    public List<AccessoryInfo> rewardsList;
+
+    [Header("Self-component references")]
+    [SerializeField] private GameSceneManager gameSceneManager;
+    
     public GameObject GetPlayerGameObject()
     {
         return _playerGameObject;
@@ -49,8 +54,6 @@ public class GameManager : MonoBehaviour
     {
         return _player;
     }
-
-    public List<AccessoryInfo> rewardsList;
 
     void Awake()
     {
@@ -346,5 +349,10 @@ public class GameManager : MonoBehaviour
     public void DidReceivePlayerShotPackage(PlayerShotPackage package)
     {
         TriggerPlayerShot(package.player);
+    }
+
+    public void LoadGameplay()
+    {
+        gameSceneManager.LoadScene(selectedCharacter);
     }
 }

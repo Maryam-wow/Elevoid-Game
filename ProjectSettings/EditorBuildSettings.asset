@@ -5,31 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/Main.unity
     guid: 08f5272cee1991a429ca0a022a88614b
-  - enabled: 0
-    path: Assets/_Scripts/PackagesConnection/Gameplay 2.unity
-    guid: 8f0f906e95dce48bcad2a71aa07983fe
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/NonAR_Water.unity
     guid: 78bea6b9a11754866812dc4e8e420192
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/_Scenes/AR.unity
-    guid: 51b298697098a46f8afeb670ea1f9a10
-  - enabled: 0
+  - enabled: 1
+    path: Assets/_Scenes/NonAR_fire.unity
+    guid: d1bf364c333e64b6bae753aafc6a42c2
+  - enabled: 1
     path: Assets/_Scenes/NonAR_Air.unity
     guid: 125d927c9129341498dd87cad66638bb
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/NonAR_Earth.unity
     guid: 06a21b4ef1e732048944121f00782561
   - enabled: 0
@@ -38,9 +26,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/AR_Air 1.unity
     guid: d63b1f2c814b54237affcec073dcc0f0
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/AR_Water 1.unity
     guid: b1a9f2fb53c9e4a7fa1c0d5db89e6b2c
+  - enabled: 0
+    path: Assets/_Scripts/PackagesConnection/Gameplay 2.unity
+    guid: 8f0f906e95dce48bcad2a71aa07983fe
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
