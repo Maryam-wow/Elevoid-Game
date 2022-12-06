@@ -19,7 +19,7 @@ public class CharacterWaterControl : MonoBehaviour
     //[SerializeField] WaterBender waterBenderController;
     [SerializeField] WaterTubeController waterTubeController;
     [SerializeField] float _TurnSpeed;
-    Vector3 waterBallTarget;
+    Transform waterBallTarget;
     Vector3 waterBendTarget;
     Vector3 waterTubeTarget;
     public GameObject explodeEffect;
@@ -75,14 +75,14 @@ public class CharacterWaterControl : MonoBehaviour
                     yield return StartCoroutine(Coroutine_Turn());
                     if (Physics.Raycast(ray, out hit))
                     {
-                        waterBallTarget = hit.point;
+                        waterBallTarget = hit.transform;
                         _Anim.SetTrigger("ThrowWaterBall");
                         gameObject.GetComponent<AudioSource>().Play();
 
-                            if (hit.collider.CompareTag("Enemy22"))
+                            if (hit.collider.CompareTag("Void"))
                             {
                                 Debug.Log("HIT : " + damage);
-                                hit.collider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
+                                // hit.collider.GetComponentInParent<VoidBehaviour>().TakeDamage(damage);
                             }
                             else
                             {
@@ -109,7 +109,7 @@ public class CharacterWaterControl : MonoBehaviour
     {
         if (waterBallController.WaterBallCreated())
         {
-            waterBallController.ThrowWaterBall(waterBallTarget);
+            waterBallController.ThrowWaterBall(waterBallTarget, damage);
         }
     }
 

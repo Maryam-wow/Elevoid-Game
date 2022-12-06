@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VoidBehaviour : MonoBehaviour
 {
@@ -9,31 +10,50 @@ public class VoidBehaviour : MonoBehaviour
     [SerializeField] private float playerHitDelay = 2f;
 
     private Transform _tower;
+    //public GameObject towerobject;
     private WaterBendingControll _waterBendingControll;
 
     private Coroutine _attackCoroutine;
 
     private bool _gotHitByPlayer;
-    
+    private int damage = 5;
+    public int currentHealth;
+    public int maxHealth = 100;
+    public WorldSpaceHealthBar healthBar;
+
+    [Header("Self-component references")]
+    [SerializeField] Animator _animator;
+
     private void Start()
     {
         _tower = GameObject.FindWithTag("Tower").transform;
 
         LookAtTower();
         _attackCoroutine = StartCoroutine(AttackCoroutine(initialDelay));
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
+        healthBar.GetComponent<Slider>().maxValue = maxHealth;
     }
 
     private void OnDestroy()
     {
         StopAttacking();
+        Debug.Log("DEAD");
     }
 
-    public void ReceiveHit()
+    public void TakeDamage(int damage)
     {
+        currentHealth = currentHealth - damage;
+        healthBar.SetHealth(currentHealth);
         _gotHitByPlayer = true;
+        Debug.Log("VOIDHEALTH: " + currentHealth);
+        
+        if (currentHealth <= 0)
+            StartDestroySelf();
     }
 
-    public void StopAttacking()
+        public void StopAttacking()
     {
         StopCoroutine(_attackCoroutine);
     }
@@ -50,6 +70,7 @@ public class VoidBehaviour : MonoBehaviour
             }
 
             StartAttack();
+            _tower.GetComponent<PlayerHealths>().PlayerTakeDamage(damage);
         }
     }
 
@@ -63,5 +84,19 @@ public class VoidBehaviour : MonoBehaviour
     void LookAtTower()
     {
         transform.LookAt(_tower);
+    }
+
+    void StartDestroySelf()
+    {
+        StopCoroutine(_attackCoroutine);
+        
+        _animator.Play("VoidDestroyAnimation");
+        
+        Invoke("DestroySelf", 5);
+    }
+
+    void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }

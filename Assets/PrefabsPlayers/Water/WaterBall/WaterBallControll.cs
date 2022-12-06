@@ -9,6 +9,7 @@ public class WaterBallControll : MonoBehaviour
     [SerializeField] Transform _CreationPoint;
     [SerializeField] WaterBall WaterBallPrefab;
     WaterBall waterBall;
+    
     private void Update()
     {
         if (!_update)
@@ -30,7 +31,7 @@ public class WaterBallControll : MonoBehaviour
                 {
                     if (waterBall != null)
                     {
-                        ThrowWaterBall(hit.point);
+                        ThrowWaterBall(hit.transform);
                     }
                 }
             }
@@ -45,9 +46,9 @@ public class WaterBallControll : MonoBehaviour
         waterBall = Instantiate(WaterBallPrefab, _CreationPoint.position, Quaternion.identity, transform);
     }
 
-    public void ThrowWaterBall(Vector3 pos)
+    public void ThrowWaterBall(Transform pos, int power = 5)
     {
-        waterBall.Throw(pos);
+        waterBall.Throw(pos, power);
         waterBall.transform.SetParent(null);
     }
 }
