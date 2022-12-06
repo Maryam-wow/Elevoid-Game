@@ -8,17 +8,8 @@ using UnityEngine.XR.ARSubsystems;
 
 using TMPro;
 
-public class GameManager : MonoBehaviour
+public class GameManager : GenericSingletonClass<GameManager>
 {
-
-    public static GameManager Instance
-    {
-        get
-        {
-            return FindObjectOfType<GameManager>();
-        }
-    }
-
     //int yourPlayerid;
     int score;
     public WebSocketConnection _webSocket;
@@ -53,19 +44,6 @@ public class GameManager : MonoBehaviour
     public PlayerPackage GetPlayer()
     {
         return _player;
-    }
-
-    void Awake()
-    {
-        if (Instance == null) // If there is no instance already
-        {
-            DontDestroyOnLoad(gameObject); // Keep the GameObject, this component is attached to, across different scenes
-            //Instance = this;
-        }
-        else if (Instance != this) // If there is already an instance and it's not `this` instance
-        {
-            Destroy(gameObject); // Destroy the GameObject, this component is attached to
-        }
     }
 
     void Start()
@@ -108,6 +86,11 @@ public class GameManager : MonoBehaviour
             DataManager.Instance.mData.health = score;
             DataManager.Instance.SaveLocal();
         }
+    }
+
+    public void SetGameOver()
+    {
+        GameObject.FindWithTag("GameOverMenu").transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void SetCharacter(CharacterType characterType)

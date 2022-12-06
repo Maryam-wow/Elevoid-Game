@@ -8,7 +8,7 @@ public class EnemyHealthSystem : MonoBehaviour
    [SerializeField] WaterBender waterBenderController;
     [SerializeField] float _TurnSpeed;
     [SerializeField] Animator _Anim;
-   private Vector3 waterBendTarget;
+   private Transform waterBendTarget;
     //Vector3 EnemyTarget;
     public int currentHealth;
     public int maxHealth = 100;
@@ -90,7 +90,7 @@ public class EnemyHealthSystem : MonoBehaviour
         if (Physics.Raycast(rayFrom, out hit))
         {
             yield return StartCoroutine(Coroutine_Turn());
-            waterBendTarget = hit.point;
+            waterBendTarget = hit.transform;
             _Anim.SetTrigger("WaterBend");
                     if (hit.collider.CompareTag("Player"))
                     {

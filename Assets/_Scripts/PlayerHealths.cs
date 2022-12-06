@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealths : MonoBehaviour
@@ -13,18 +10,11 @@ public class PlayerHealths : MonoBehaviour
     {
         playerHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        
     }
-public void PlayerTakeDamage(int damageAmount)
 
+    public void PlayerTakeDamage(int damageAmount)
     {
-    playerHealth = playerHealth - damageAmount;
-    healthBar.SetHealth(playerHealth);
-
-       // if (playerHealth <= 0)
-   // {
-        //Destroy(gameObject);
-    //}
+        playerHealth = playerHealth - damageAmount;
+        healthBar.SetHealth(playerHealth);
+    }
 }
-}
-

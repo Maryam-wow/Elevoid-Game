@@ -11,6 +11,8 @@ TagManager:
   - Fire1
   - Enemy22
   - Tower
+  - GameOverMenu
+  - GameManager
   layers:
   - Default
   - TransparentFX

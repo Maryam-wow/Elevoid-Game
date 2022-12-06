@@ -20,15 +20,16 @@ public class WaterBendingControll : MonoBehaviour
 
     [SerializeField] float _PuddleScaleSpeed;
 
-    private Vector3 _target;
-    public void WaterBend(Vector3 target)
+    private Transform _target;
+    
+    public void WaterBend(Transform target, int damage = 0)
     {
         _target = target;
         StopAllCoroutines();
-        StartCoroutine(Coroutine_WaterBend());
+        StartCoroutine(Coroutine_WaterBend(damage));
     }
 
-    IEnumerator Coroutine_WaterBend()
+    IEnumerator Coroutine_WaterBend(int damage = 0)
     {
         _Spline.gameObject.SetActive(false);
         _SplashParticle.gameObject.SetActive(false);
@@ -80,7 +81,7 @@ public class WaterBendingControll : MonoBehaviour
                     if (!_SplashParticle.isPlaying)
                     {
                         _SplashParticle.gameObject.SetActive(true);
-                        _SplashParticle.transform.position=_target;
+                        _SplashParticle.transform.position=_target.position;
                         _SplashParticle.Play();
                     }
                 }
@@ -92,6 +93,19 @@ public class WaterBendingControll : MonoBehaviour
         _Spline.gameObject.SetActive(false);
         _SplashParticle.Stop();
         Destroy(gameObject, 2f);
+
+        DamageTower(damage);
+    }
+
+    private void DamageTower(int damage)
+    {
+        if (!_target.TryGetComponent(out TowerBehaviour towerBehaviour))
+        {
+            Debug.LogWarning("Target is not TowerBehaviour, it is: " + _target.gameObject.name);
+            return;
+        }
+        
+        towerBehaviour.TakeDamage(damage);
     }
 
     private void ConfigureSpline()
@@ -102,7 +116,7 @@ public class WaterBendingControll : MonoBehaviour
             _Spline.RemoveNode(nodes[i]);
         }
 
-        Vector3 targetDirection = (_target - transform.position);
+        Vector3 targetDirection = (_target.position - transform.position);
         transform.forward = new Vector3(targetDirection.x, 0, targetDirection.z).normalized;
 
         int sign = Random.Range(0, 2) == 0 ? 1 : -1;
@@ -130,10 +144,10 @@ public class WaterBendingControll : MonoBehaviour
             angle += 90* sign;
         }
 
-        Vector3 targetNodePosition = transform.InverseTransformPoint(_target);
+        Vector3 targetNodePosition = transform.InverseTransformPoint(_target.position);
 
         Quaternion randomRotation = Quaternion.Euler(Random.Range(0, 90), Random.Range(-40, 40), 0);
-        Vector3 targetNodeDirection = _target + randomRotation * (transform.forward * (_target-transform.position).magnitude*Random.Range(0.2f,1f));
+        Vector3 targetNodeDirection = _target.position + randomRotation * (transform.forward * (_target.position-transform.position).magnitude*Random.Range(0.2f,1f));
 
         targetNodeDirection= transform.InverseTransformPoint(targetNodeDirection);
         SplineNode node = new SplineNode(targetNodePosition, targetNodeDirection);

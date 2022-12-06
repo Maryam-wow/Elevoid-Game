@@ -25,12 +25,12 @@ public class WaterBender : MonoBehaviour
             //RaycastHit hit;
             //if(Physics.Raycast(ray,out hit))
             {
-                Attack(hit.point);
+                Attack(hit.transform);
             }
         }
     }
 
-    public void Attack(Vector3 target)
+    public void Attack(Transform target)
     {
         WaterBendingControll water = Instantiate(_WaterPrefab, transform.position, Quaternion.identity);
         water.WaterBend(target);

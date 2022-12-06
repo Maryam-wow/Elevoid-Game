@@ -70,7 +70,6 @@ public class VoidBehaviour : MonoBehaviour
             }
 
             StartAttack();
-            _tower.GetComponent<PlayerHealths>().PlayerTakeDamage(damage);
         }
     }
 
@@ -78,7 +77,7 @@ public class VoidBehaviour : MonoBehaviour
     {
         _waterBendingControll = Instantiate(waterBenderObjectReference, transform.position, Quaternion.identity);
         
-        _waterBendingControll.WaterBend(_tower.position);
+        _waterBendingControll.WaterBend(_tower, damage);
     }
 
     void LookAtTower()
@@ -92,11 +91,6 @@ public class VoidBehaviour : MonoBehaviour
         
         _animator.Play("VoidDestroyAnimation");
         
-        Invoke("DestroySelf", 5);
-    }
-
-    void DestroySelf()
-    {
-        Destroy(gameObject);
+        Destroy(gameObject, 5);
     }
 }
