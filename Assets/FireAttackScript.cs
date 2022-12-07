@@ -15,24 +15,26 @@ public class FireAttackScript : MonoBehaviour
     }
     private void Update()
     {
-        //if (CrossPlatformInputManager.GetButtonDown("Fire"))
-        //{
+        if (CrossPlatformInputManager.GetButtonDown("Fire"))
+        {
             //LookAtVoid();
-          //  particleSystem.Play();
-            //OnParticleCollision();
-        //}
+            particleSystem.Play();
+            OnParticleCollision();
+        }
         if (Input.GetMouseButtonDown(0))
         {
-            particleSystem.Play();
+            //particleSystem.Play();
             OnParticleCollision();
         }
     }
     private void OnParticleCollision()
     {
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
+            particleSystem.Play();
             if (hit.collider.CompareTag("Void"))
         {
                 Debug.Log("HIT : " + damage);

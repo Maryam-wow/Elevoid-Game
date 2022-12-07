@@ -121,7 +121,7 @@ public class CrackControll : MonoBehaviour
 
     private void InstantiateRock()
     {
-        Debug.Log("Testt");
+        //Debug.Log("Testt");
         _RockEmerge.gameObject.SetActive(true);
         Vector3 position = transform.position + transform.forward * _range * transform.localScale.z;
         _RockEmerge.transform.position = position;
