@@ -337,5 +337,6 @@ public class GameManager : GenericSingletonClass<GameManager>
     public void LoadGameplay()
     {
         gameSceneManager.LoadScene(selectedCharacter);
+        Start();
     }
 }

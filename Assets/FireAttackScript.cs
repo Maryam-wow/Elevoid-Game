@@ -15,10 +15,16 @@ public class FireAttackScript : MonoBehaviour
     }
     private void Update()
     {
-        if (CrossPlatformInputManager.GetButtonDown("Fire"))
-        {
+        //if (CrossPlatformInputManager.GetButtonDown("Fire"))
+        //{
             //LookAtVoid();
+          //  particleSystem.Play();
+            //OnParticleCollision();
+        //}
+        if (Input.GetMouseButtonDown(0))
+        {
             particleSystem.Play();
+            OnParticleCollision();
         }
     }
     private void OnParticleCollision()
