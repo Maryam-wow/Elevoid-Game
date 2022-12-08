@@ -659,87 +659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1207146943
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7266955692871843666, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_Name
-      value: WebSocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1859.3376
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 178.37427
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8747635910462533000, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ccbfb34f300d74ff4bd8361c38b70edc, type: 3}
---- !u!114 &1207146944 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6064809073417074688, guid: ccbfb34f300d74ff4bd8361c38b70edc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1207146943}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca32f5a9cc3424877a8b7e003ec007a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1220842411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4974955505607371129, guid: 0477c526aacca4e0b9007602a453f15b,
@@ -1383,9 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3c82d208d1ee24f9ce24ddd6012568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _webSocket: {fileID: 1207146944}
-  playerPrefabWater: {fileID: 8008071671859123046, guid: e0c68f5d2824845d4aa2e21cbe23b762,
-    type: 3}
+  _playerGameObject: {fileID: 0}
   charactersInfo:
   - {fileID: 11400000, guid: 176d3eaf8d60f2a48adc6ca812ceb215, type: 2}
   - {fileID: 11400000, guid: f0d21af7fdc6e184ab3b66cce2627827, type: 2}
@@ -1556,7 +1473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterGameplaySceneNames:
   - NonAR_Water
-  - NonAR_Earth
+  - AR_Earth 1
   - NonAR_Air
   - NonAR_fire
 --- !u!114 &1900482022 stripped

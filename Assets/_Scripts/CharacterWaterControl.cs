@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 
 [System.Serializable]
-public class BehaviourState
+public class BehaviourWaterState
 {
     public string ID;
     public GameObject Obj;
@@ -20,7 +20,6 @@ public class CharacterWaterControl : MonoBehaviour
     [SerializeField] WaterTubeController waterTubeController;
     [SerializeField] float _TurnSpeed;
     Transform waterBallTarget;
-    Vector3 waterBendTarget;
     Vector3 waterTubeTarget;
     public GameObject explodeEffect;
     private int damage = 5;
@@ -37,22 +36,6 @@ public class CharacterWaterControl : MonoBehaviour
             //WaterBallHitCheck();
             //PlayerWaterAttack1.Play();
         }
-        //if (CrossPlatformInputManager.GetButtonDown("Att2"))
-        //{
-        //    if (hasWaterFired == false)
-         //       StopAllCoroutines();
-         //   StartCoroutine(Coroutine_WaterBend());
-            //WaterBallHitCheck();
-            //PlayerWaterAttack1.Play();
-        //}
-        if (CrossPlatformInputManager.GetButtonDown("Att3"))
-        {
-            if (hasWaterFired == false)
-                StopAllCoroutines();
-            StartCoroutine(Coroutine_WaterTube());
-            //WaterBallHitCheck();
-            //PlayerWaterAttack1.Play();
-        }
 
 
         IEnumerator Coroutine_WaterBall()
@@ -63,7 +46,7 @@ public class CharacterWaterControl : MonoBehaviour
             {
                 if (!waterBallController.WaterBallCreated())
                 {
-                        yield return StartCoroutine(Coroutine_Turn());
+                    yield return StartCoroutine(Coroutine_Turn());
                     _Anim.SetTrigger("CreateWaterBall");
                     gameObject.GetComponent<AudioSource>().Play();
 
@@ -113,75 +96,6 @@ public class CharacterWaterControl : MonoBehaviour
         }
     }
 
-    //IEnumerator Coroutine_WaterBend()
-    //{
-    //    while (true)
-    //    {
-     //       if (Input.GetMouseButtonDown(0))
-       //     {
-       //         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-       //         RaycastHit hit;
-        //        yield return StartCoroutine(Coroutine_Turn());
-        //        gameObject.GetComponent<AudioSource>().Play();
-        //        if (Physics.Raycast(ray, out hit))
-        //        {
-        //            waterBendTarget = hit.point;
-        //            _Anim.SetTrigger("WaterBend");
-        //            if (hit.collider.CompareTag("Enemy22"))
-         //           {
-         //               Debug.Log("HIT : " + damage);
-        //                hit.collider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
-        //            }
-        //            else
-        //            {
-         //               Debug.Log("MISS");
-         //           }
-         //       }
-         //   }
-            //yield return null;
-        //}
-   // }
-
-    //private void AnimationCallback_WaterBend()
-    //{
-     //   waterBenderController.Attack(waterBendTarget);
-    //}
-
-    IEnumerator Coroutine_WaterTube()
-    {
-        while (true)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                yield return StartCoroutine(Coroutine_Turn());
-                gameObject.GetComponent<AudioSource>().Play();
-                if (Physics.Raycast(ray, out hit))
-                {
-                    waterTubeTarget = hit.point;
-                    _Anim.SetTrigger("WaterTube");
-                    if (hit.collider.CompareTag("Enemy22"))
-                    {
-                        Debug.Log("HIT : " + damage);
-                        hit.collider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
-                    }
-                    else
-                    {
-                        Debug.Log("MISS");
-                    }
-
-                }
-            }
-            yield return null;
-        }
-    }
-
-    private void AnimationCallback_WaterTube()
-    {
-        waterTubeController.InstantiateWaterTube(waterTubeTarget);
-    }
-
     IEnumerator Coroutine_Turn()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -202,9 +116,6 @@ public class CharacterWaterControl : MonoBehaviour
                 yield return null;
             }
             _Anim.SetFloat("Turn", 0);
-            
-            }
         }
-
-        }
-      
+    }
+}

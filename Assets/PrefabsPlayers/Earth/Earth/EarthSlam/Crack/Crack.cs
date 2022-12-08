@@ -21,35 +21,36 @@ public class Crack : MonoBehaviour
         _CrackMask.SetBlendShapeWeight(index, 100 - value);
     }
 
-    //[SerializeField] float _OpenValue;
-    //[SerializeField] float _Speed;
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        for (int i = 1; i < _BlendShapeCount - 1; i++)
-    //        {
-    //            _Crack.SetBlendShapeWeight(i, 100);
-    //            _CrackMask.SetBlendShapeWeight(i, 100);
-    //        }
-    //        StopAllCoroutines();
-    //        StartCoroutine(Coroutine_OpenUp());
-    //    }
-    //}
+    [SerializeField] float _OpenValue;
+    [SerializeField] float _Speed;
 
-    //IEnumerator Coroutine_OpenUp()
-    //{
-    //    for (int i = 1; i < BlendShapeCount-1; i++) {
-    //        float lerp = 0;
-    //        while (lerp < 1)
-    //        {
-    //            _Crack.SetBlendShapeWeight(i, 100 - lerp * _OpenValue);
-    //            _CrackMask.SetBlendShapeWeight(i, 100 -  lerp * _OpenValue);
-    //            lerp += Time.deltaTime* _Speed;
-    //            yield return null;
-    //        }
-    //        _Crack.SetBlendShapeWeight(i, 100 - _OpenValue);
-    //        _CrackMask.SetBlendShapeWeight(i, 100 - _OpenValue);
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            for (int i = 1; i < BlendShapeCount - 1; i++)
+            {
+                _Crack.SetBlendShapeWeight(i, 100);
+                _CrackMask.SetBlendShapeWeight(i, 100);
+            }
+            StopAllCoroutines();
+            StartCoroutine(Coroutine_OpenUp());
+        }
+    }
+
+    IEnumerator Coroutine_OpenUp()
+    {
+        for (int i = 1; i < BlendShapeCount-1; i++) {
+            float lerp = 0;
+            while (lerp < 1)
+            {
+                _Crack.SetBlendShapeWeight(i, 100 - lerp * _OpenValue);
+                _CrackMask.SetBlendShapeWeight(i, 100 -  lerp * _OpenValue);
+                lerp += Time.deltaTime* _Speed;
+                yield return null;
+            }
+            _Crack.SetBlendShapeWeight(i, 100 - _OpenValue);
+            _CrackMask.SetBlendShapeWeight(i, 100 - _OpenValue);
+        }
+    }
 }
