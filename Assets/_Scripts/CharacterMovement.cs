@@ -27,12 +27,6 @@ public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler,
         transform.localPosition = Vector2.ClampMagnitude(eventData.position - (Vector2)gamePad.position, gamePad.rect.width * 0.5f);
 
         move = new Vector3(transform.localPosition.x, 0f, transform.localPosition.y).normalized; // no movement in y
-
-        if (!walk)
-        {
-            walk = true;
-            _playerGameObject.GetComponent<Animator>().SetBool("walk", true); // on drag start the walk animation
-        }
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -46,9 +40,6 @@ public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler,
         move = Vector3.zero;
 
         if (_moveCo != null) StopCoroutine(_moveCo);
-
-        walk = false;
-        _playerGameObject.GetComponent<Animator>().SetBool("walk", false);
     }
 
     IEnumerator PlayerMovement()

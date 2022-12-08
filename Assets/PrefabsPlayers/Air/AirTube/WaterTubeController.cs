@@ -31,6 +31,7 @@ public class WaterTubeController : MonoBehaviour
 
     public void InstantiateWaterTube(Vector3 hitPoint)
     {
+        Debug.Log("instantiating watertube");
         Vector3 direction = (hitPoint - _CreationPoint.position);
         direction.y = 0;
         direction = direction.normalized;
