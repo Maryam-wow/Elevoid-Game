@@ -489,7 +489,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 245776793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba835c0582824579a92ea562f02c75d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e5021d76a08048c5a1604e444f8f3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gamePad: {fileID: 245776792}
@@ -1313,8 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3c82d208d1ee24f9ce24ddd6012568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _webSocket: {fileID: 0}
-  playerPrefabWater: {fileID: 6963567642621642658, guid: c5b860e07aba84696b4c1d0d9e1228ec,
+  _playerGameObject: {fileID: 6963567642621642658, guid: c5b860e07aba84696b4c1d0d9e1228ec,
     type: 3}
   charactersInfo:
   - {fileID: 11400000, guid: 176d3eaf8d60f2a48adc6ca812ceb215, type: 2}

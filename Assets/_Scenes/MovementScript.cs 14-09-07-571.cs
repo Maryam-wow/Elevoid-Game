@@ -1,16 +1,15 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
 
-public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
+public class MovementScript : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
 
     public RectTransform gamePad;
     public float moveSpeed = 0.2f;
     private GameObject playerGameObject;
+    private PlayerPackage player;
 
 
     Vector3 move;
@@ -36,23 +35,23 @@ public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler,
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-            // do the movement when touched down
-            StartCoroutine(PlayerMovement());
+        // do the movement when touched down
+        _moveCo = StartCoroutine(PlayerMovement());
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         transform.localPosition = Vector3.zero; // joystick returns to mean pos when not touched
         move = Vector3.zero;
-
+        
         if (_moveCo != null) StopCoroutine(_moveCo);
-
+        
         walk = false;
         playerGameObject.GetComponent<Animator>().SetBool("walk", false);
     }
 
     IEnumerator PlayerMovement()
-        {
+    {
         while (true)
         {
             GameObject playerGameObject = GameManager.Instance.GetPlayerGameObject();
@@ -69,6 +68,3 @@ public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler,
     }
 
 }
-
-
- 

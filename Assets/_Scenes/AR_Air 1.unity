@@ -933,8 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3c82d208d1ee24f9ce24ddd6012568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _webSocket: {fileID: 0}
-  playerPrefabWater: {fileID: 8570192145665351210, guid: aa9f73e154bc645b2a22d152637e85a9,
+  _playerGameObject: {fileID: 8570192145665351210, guid: aa9f73e154bc645b2a22d152637e85a9,
     type: 3}
   charactersInfo:
   - {fileID: 11400000, guid: 176d3eaf8d60f2a48adc6ca812ceb215, type: 2}
@@ -1159,8 +1158,35 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6773409573894594011, guid: cb0de3c96e35d42f4b7903df8b50c334, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cb0de3c96e35d42f4b7903df8b50c334, type: 3}
+--- !u!224 &655821585 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4976558715424594129, guid: cb0de3c96e35d42f4b7903df8b50c334,
+    type: 3}
+  m_PrefabInstance: {fileID: 655821584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &655821586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4976558714313808941, guid: cb0de3c96e35d42f4b7903df8b50c334,
+    type: 3}
+  m_PrefabInstance: {fileID: 655821584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &655821587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655821586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5021d76a08048c5a1604e444f8f3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamePad: {fileID: 655821585}
+  moveSpeed: 0.2
 --- !u!1 &724289887
 GameObject:
   m_ObjectHideFlags: 0
