@@ -6,6 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class EarthCharacterController : MonoBehaviour
 {
     [SerializeField] CrackControll _CrackPrefab;
+    [SerializeField] Animator _Anim;
     Vector3 direction;
     private int damage = 5;
 
