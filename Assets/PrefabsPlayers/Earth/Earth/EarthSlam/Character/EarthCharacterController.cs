@@ -39,6 +39,7 @@ public class EarthCharacterController : MonoBehaviour
         CrackControll crackControll = Instantiate(_CrackPrefab, pos, Quaternion.identity);
         crackControll.transform.forward = direction;
         crackControll.Open(15);
+        crackControll.GetTriggerAttackBehaviour().damage = damage;
     }
     }
 }

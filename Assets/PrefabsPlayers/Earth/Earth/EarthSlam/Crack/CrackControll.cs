@@ -27,6 +27,13 @@ public class CrackControll : MonoBehaviour
 
     private float _range;
 
+    [SerializeField] private TriggerAttackBehaviour triggerAttackBehaviour;
+
+    public TriggerAttackBehaviour GetTriggerAttackBehaviour()
+    {
+        return triggerAttackBehaviour;
+    }
+
     public void Open(float range, bool isSideCrack = false)
     {
         for (int i = 0; i < _Container.childCount; i++)
