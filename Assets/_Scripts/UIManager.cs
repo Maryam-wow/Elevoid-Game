@@ -76,7 +76,6 @@ public class UIManager : MonoBehaviour
         SelectionManager.Instance.CharacterTabClicked((CharacterType)GameManager.Instance.selectedCharacter);
         selectedCharacterScreen.SetActive(true);
         quizScreen.SetActive(false);
-        SceneManager.LoadScene("AR");
     }
 
     public void QuitButtonClicked()
