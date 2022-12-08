@@ -1302,9 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3c82d208d1ee24f9ce24ddd6012568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _webSocket: {fileID: 0}
-  playerPrefabWater: {fileID: 8008071671859123046, guid: e0c68f5d2824845d4aa2e21cbe23b762,
-    type: 3}
+  _playerGameObject: {fileID: 0}
   charactersInfo:
   - {fileID: 11400000, guid: 176d3eaf8d60f2a48adc6ca812ceb215, type: 2}
   - {fileID: 11400000, guid: f0d21af7fdc6e184ab3b66cce2627827, type: 2}
@@ -1475,7 +1473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterGameplaySceneNames:
   - NonAR_Water
-  - NonAR_Earth
+  - AR_Earth 1
   - NonAR_Air
   - NonAR_fire
 --- !u!114 &1900482022 stripped
