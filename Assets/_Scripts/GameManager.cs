@@ -30,11 +30,6 @@ public class GameManager : GenericSingletonClass<GameManager>
 
     [Header("Self-component references")]
     [SerializeField] private GameSceneManager gameSceneManager;
-    
-    public GameObject GetPlayerGameObject()
-    {
-        return _playerGameObject;
-    }
 
     void Start()
     {

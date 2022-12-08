@@ -1,16 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
 
 public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
 
     public RectTransform gamePad;
     public float moveSpeed = 0.2f;
-    private GameObject playerGameObject;
+    private GameObject _playerGameObject;
 
 
     Vector3 move;
@@ -19,10 +16,13 @@ public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler,
 
     private Coroutine _moveCo;
 
+    private void Start()
+    {
+        _playerGameObject = GameObject.FindWithTag("Player");
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
-        playerGameObject = GameManager.Instance.GetPlayerGameObject();
-
         transform.position = eventData.position;
         transform.localPosition = Vector2.ClampMagnitude(eventData.position - (Vector2)gamePad.position, gamePad.rect.width * 0.5f);
 
@@ -31,13 +31,13 @@ public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler,
         if (!walk)
         {
             walk = true;
-            playerGameObject.GetComponent<Animator>().SetBool("walk", true); // on drag start the walk animation
+            _playerGameObject.GetComponent<Animator>().SetBool("walk", true); // on drag start the walk animation
         }
     }
     public void OnPointerDown(PointerEventData eventData)
     {
             // do the movement when touched down
-            StartCoroutine(PlayerMovement());
+            _moveCo = StartCoroutine(PlayerMovement());
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -48,19 +48,22 @@ public class CharacterMovement : MonoBehaviour, IDragHandler, IPointerUpHandler,
         if (_moveCo != null) StopCoroutine(_moveCo);
 
         walk = false;
-        playerGameObject.GetComponent<Animator>().SetBool("walk", false);
+        _playerGameObject.GetComponent<Animator>().SetBool("walk", false);
     }
 
     IEnumerator PlayerMovement()
         {
         while (true)
         {
-            GameObject playerGameObject = GameManager.Instance.GetPlayerGameObject();
+            
 
             if (move != Vector3.zero)
             {
-                playerGameObject.transform.rotation = Quaternion.Slerp
-                        (playerGameObject.transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 5.0f);
+                _playerGameObject.transform.rotation = Quaternion.Slerp
+                        (_playerGameObject.transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 5.0f);
+
+                _playerGameObject.transform.position +=
+                    _playerGameObject.transform.forward * Time.deltaTime * moveSpeed;
             }
 
             yield return new WaitForEndOfFrame();
