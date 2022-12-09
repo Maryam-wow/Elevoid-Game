@@ -16,13 +16,11 @@ public class CharacterWaterControl : MonoBehaviour
     [SerializeField] Animator _Anim;
 
     [SerializeField] WaterBallControll waterBallController;
-    //[SerializeField] WaterBender waterBenderController;
-    [SerializeField] WaterTubeController waterTubeController;
     [SerializeField] float _TurnSpeed;
     Transform waterBallTarget;
     Vector3 waterTubeTarget;
     public GameObject explodeEffect;
-    private int damage = 5;
+    private int damage = 35;
     private bool hasWaterFired = false;
     public AudioSource PlayerWaterAttack1;
 

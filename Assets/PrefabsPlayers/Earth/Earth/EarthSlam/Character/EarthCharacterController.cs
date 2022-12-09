@@ -8,7 +8,8 @@ public class EarthCharacterController : MonoBehaviour
     [SerializeField] CrackControll _CrackPrefab;
     [SerializeField] Animator _Anim;
     Vector3 direction;
-    private int damage = 5;
+
+    private int damage = 1;
 
     private void Update()
     {
@@ -40,6 +41,7 @@ public class EarthCharacterController : MonoBehaviour
         crackControll.transform.forward = direction;
         crackControll.Open(15);
         crackControll.GetTriggerAttackBehaviour().damage = damage;
+
     }
     }
 }

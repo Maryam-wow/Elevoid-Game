@@ -7,7 +7,7 @@ public class CharacterAirAttack : MonoBehaviour
 {
     [SerializeField] WaterTubeController waterTubeController;
     Transform waterTubeTarget;
-    private int damage = 5;
+    private int damage = 15;
     
     [SerializeField] private float attackDelay = 1.5f;
 
