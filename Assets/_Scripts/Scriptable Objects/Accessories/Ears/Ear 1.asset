@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accessoriesType: 0
   accessoryPhoto: {fileID: 21300000, guid: 740a201abc352c34f80dde24b5f8f227, type: 3}
-  accessoryUIPhoto: {fileID: 21300000, guid: 212f7e13dbad6ce408d9649d55d69eb6, type: 3}
-  unlocked: 0
+  accessoryUIPhoto: {fileID: 21300000, guid: ee180631cad6d46cca403422c03ecd2c, type: 3}
+  unlocked: 1

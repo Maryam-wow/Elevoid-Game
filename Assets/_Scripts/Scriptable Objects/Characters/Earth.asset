@@ -15,4 +15,4 @@ MonoBehaviour:
   characterType: 1
   characterPhoto: {fileID: 21300000, guid: 8c231990b908b5c49bf02d679876f75f, type: 3}
   health: 50
-  unlcoked: 0
+  unlcoked: 1
