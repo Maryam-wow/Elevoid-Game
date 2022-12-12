@@ -11,14 +11,19 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     #region Buttons
-    public Button startButton;
+    public Button SinglePlayerButton;
     public Button quitButton;
     //public Button startGameButton;
     public Button settingsButton;
     public Button manifestButton;
     public Button closeSettingsButton;
     public Button backToMainButton;
-    //public Button inventoryButton;
+    public Button backFromCreditsButton;
+    public Button backFromEncyclopediaButton;
+    public Button backFromQuizButton;
+    public Button inventoryButton;
+    public Button encyclopediaButton;
+    public Button creditsButton;
     #endregion
 
     #region Gameobjects
@@ -27,6 +32,8 @@ public class UIManager : MonoBehaviour
     public GameObject selectedCharacterScreen;
     public GameObject rewardDailyScreen;
     public GameObject settingsScreen;
+    public GameObject encyclopediaScreen;
+    public GameObject creditsScreen;
     #endregion
 
 
@@ -48,27 +55,32 @@ public class UIManager : MonoBehaviour
 
     public void InitializUI()
     {
-        startButton.onClick.AddListener(StartButtonClicked);
-        //inventoryButton.onClick.AddListener(InventoryButtonClicked);
+        SinglePlayerButton.onClick.AddListener(SinglePlayerClicked);
+        inventoryButton.onClick.AddListener(InventoryButtonClicked);
+        backToMainButton.onClick.AddListener(BackToMainButtonClicked);
+        encyclopediaButton.onClick.AddListener(EncyclopediaButtonClicked);
         manifestButton.onClick.AddListener(ManifestButtonClicked);
         quitButton.onClick.AddListener(QuitButtonClicked);
-        //startGameButton.onClick.AddListener(StartGameClicked);
+        creditsButton.onClick.AddListener(CreditsButtonClicked);
+        backFromQuizButton.onClick.AddListener(BackToMainButtonClicked);
+        backFromCreditsButton.onClick.AddListener(BackToMainButtonClicked);
+        backFromEncyclopediaButton.onClick.AddListener(BackToMainButtonClicked);
         closeSettingsButton.onClick.AddListener(CloseSettingsButtonClicked);
         backToMainButton.onClick.AddListener(BackToMainButtonClicked);
         settingsButton.onClick.AddListener(SettingsButtonClicked);
     }
 
-    public void StartButtonClicked()
+    public void SinglePlayerClicked()
     {
         rewardDailyScreen.SetActive(true);
         quizScreen.SetActive(true);
         //mainScreen.SetActive(true);
     }
-    //public void InventoryButtonClicked()
-   // {
-   //    SelectionManager.Instance.CharacterTabClicked((CharacterType)GameManager.Instance.selectedCharacter);
-   //    selectedCharacterScreen.SetActive(true);
-   //}
+    public void InventoryButtonClicked()
+    {
+       //SelectionManager.Instance.CharacterTabClicked((CharacterType)GameManager.Instance.selectedCharacter);
+       selectedCharacterScreen.SetActive(true);
+   }
     public void ManifestButtonClicked()
     {
 
@@ -76,6 +88,14 @@ public class UIManager : MonoBehaviour
         SelectionManager.Instance.CharacterTabClicked((CharacterType)GameManager.Instance.selectedCharacter);
         selectedCharacterScreen.SetActive(true);
         quizScreen.SetActive(false);
+    }
+    public void EncyclopediaButtonClicked()
+    {
+        encyclopediaScreen.SetActive(true);
+    }
+    public void CreditsButtonClicked()
+    {
+        creditsScreen.SetActive(true);
     }
 
     public void QuitButtonClicked()
@@ -118,7 +138,10 @@ public class UIManager : MonoBehaviour
     }
     public void BackToMainButtonClicked()
     {
+        quizScreen.SetActive(false);
+        encyclopediaScreen.SetActive(false);
         selectedCharacterScreen.SetActive(false);
+        creditsScreen.SetActive(false);
         mainScreen.SetActive(true);
     }
 
