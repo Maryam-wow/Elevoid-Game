@@ -10,6 +10,7 @@ public class AccessoryInfo : ScriptableObject
 
     public Sprite accessoryPhoto;
     public Sprite accessoryUIPhoto;
+    public GameObject accessory3D;
 
     public bool unlocked;
 

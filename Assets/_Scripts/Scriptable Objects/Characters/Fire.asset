@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterType: 3
   characterPhoto: {fileID: 21300000, guid: 6557f25e5ca6c254aae801e1f6ffc6fd, type: 3}
+  character3D: {fileID: 6963567642621642658, guid: c5b860e07aba84696b4c1d0d9e1228ec,
+    type: 3}
   health: 50
   unlcoked: 1

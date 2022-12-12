@@ -9,6 +9,7 @@ public class CharacterInfo : ScriptableObject
     public CharacterType characterType;
 
     public Sprite characterPhoto;
+    public GameObject character3D;
 
     public int health;
 

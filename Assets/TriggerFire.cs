@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class TriggerFire : MonoBehaviour
 {
     public int damage = 5;
     public ParticleSystem particleSystem;
+    public float attackDuration=0.6f;
+    private Coroutine attackCoroutine;
 
     private void Start()
     {
@@ -18,12 +21,35 @@ public class TriggerFire : MonoBehaviour
                 Debug.LogWarning("Target is not VoidBehaviour, it is: " + other.gameObject.name);
                 return;
             }
-        
-            v.TakeDamage(damage);
+
+            attackCoroutine= StartCoroutine(AttackCoroutine(v));
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Void"))
+        {
+            if (attackCoroutine!=null)
+            {
+                StopCoroutine(attackCoroutine);
+
+            }
         }
     }
     private void OnParticleCollision()
     {
         particleSystem.Play();
     }
+    IEnumerator AttackCoroutine(VoidBehaviour v)
+    {
+        while (true)
+            {
+            v.TakeDamage(damage);
+            yield return new WaitForSeconds(attackDuration);
+
+
+        }
+    }    
+
+
 }

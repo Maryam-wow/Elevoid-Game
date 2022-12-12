@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d022d94e81bec44a1fa1b13333f11c, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  characterType: 0
+  characterType: 1
   characterPhoto: {fileID: 0}
+  character3D: {fileID: 0}
   health: 0
   unlcoked: 1
