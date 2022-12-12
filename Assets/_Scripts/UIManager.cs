@@ -138,8 +138,8 @@ public class UIManager : MonoBehaviour
     }
     public void BackToMainButtonClicked()
     {
-        quizScreen.SetActive(false);
         encyclopediaScreen.SetActive(false);
+        quizScreen.SetActive(false);
         selectedCharacterScreen.SetActive(false);
         creditsScreen.SetActive(false);
         mainScreen.SetActive(true);
