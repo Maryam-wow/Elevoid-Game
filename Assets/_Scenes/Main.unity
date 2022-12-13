@@ -12082,7 +12082,7 @@ GameObject:
   - component: {fileID: 2066164277}
   - component: {fileID: 2066164278}
   m_Layer: 5
-  m_Name: AppControl
+  m_Name: JournalingControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
