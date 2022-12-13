@@ -21,7 +21,7 @@ public class CrackControll : MonoBehaviour
     [SerializeField] Animator _RockEmerge;
     [SerializeField] ParticleSystem _SmallPuffsPrefab;
 
-    [SerializeField] CinemachineImpulseSource _CinemachineImpulseSource;
+    //[SerializeField] CinemachineImpulseSource _CinemachineImpulseSource;
     [SerializeField] float _ImpulseForceSlam;
     [SerializeField] float _ImpulseForceRock;
 
@@ -57,7 +57,7 @@ public class CrackControll : MonoBehaviour
         _RockEmerge.gameObject.SetActive(false);
         if (!isSideCrack)
         {
-            _CinemachineImpulseSource.GenerateImpulseAt(transform.position, Vector3.forward * _ImpulseForceSlam);
+            //_CinemachineImpulseSource.GenerateImpulseAt(transform.position, Vector3.forward * _ImpulseForceSlam);
             _Slam.Play();
         }
 
@@ -134,7 +134,7 @@ public class CrackControll : MonoBehaviour
         _RockEmerge.transform.position = position;
         _RockEmerge.transform.forward = transform.forward;
         _RockEmerge.SetTrigger("Appear");
-        _CinemachineImpulseSource.GenerateImpulseAt(position,Vector3.forward*_ImpulseForceRock);
+       // _CinemachineImpulseSource.GenerateImpulseAt(position,Vector3.forward*_ImpulseForceRock);
     }
 
     private void InstantiatePuff(int i, int j)
