@@ -7316,6 +7316,11 @@ MonoBehaviour:
   - {fileID: 1806897074}
   currentAccessorType: 0
   currentCharacterType: 0
+  characterCustomizationPrefsSOs:
+  - {fileID: 11400000, guid: c3408acf0b81c79479cd1a62ed58af40, type: 2}
+  - {fileID: 11400000, guid: 34df5b88ea149f8479ea17ced2fc7050, type: 2}
+  - {fileID: 11400000, guid: 46172e31609589c48983e4cf0bb4792c, type: 2}
+  - {fileID: 11400000, guid: 1e9a9933839a48745abb03d65d800643, type: 2}
 --- !u!4 &1325874438
 Transform:
   m_ObjectHideFlags: 0

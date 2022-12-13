@@ -114,7 +114,6 @@ public class QuizManager : MonoBehaviour
         }
 
         GameManager.Instance.SetCharacter((CharacterType)selected);
-        DataManager.Instance.mData.selectedCharacter = (CharacterType)selected;
 
         UIManager.Instance.EndQuiz();
     }
