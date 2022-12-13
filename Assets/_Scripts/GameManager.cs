@@ -61,6 +61,7 @@ public class GameManager : GenericSingletonClass<GameManager>
     public void SetCharacter(CharacterType characterType)
     {
         selectedCharacter = (int)characterType;
+        DataManager.Instance.mData.selectedCharacter = characterType;
     }
 
 

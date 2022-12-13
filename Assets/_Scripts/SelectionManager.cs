@@ -35,6 +35,8 @@ public class SelectionManager : MonoBehaviour
     public AccessoriesType currentAccessorType;
     public CharacterType currentCharacterType;
 
+    public CharacterCustomizationPrefsSO[] characterCustomizationPrefsSOs;
+
     private void Start()
     {
         Instance = this;
@@ -205,6 +207,9 @@ public class SelectionManager : MonoBehaviour
             {
                 selectedEar.enabled = true;
                 selectedEar.sprite = GameManager.Instance.earsInfo[number].accessoryPhoto;
+
+                characterCustomizationPrefsSOs[GameManager.Instance.selectedCharacter].selectedEar
+                    = GameManager.Instance.earsInfo[number].accessory3D;
             }
         }
         else if (currentAccessorType == AccessoriesType.Eyes)
@@ -213,6 +218,9 @@ public class SelectionManager : MonoBehaviour
             {
                 selectedEye.enabled = true;
                 selectedEye.sprite = GameManager.Instance.eyesInfo[number].accessoryPhoto;
+
+                characterCustomizationPrefsSOs[GameManager.Instance.selectedCharacter].selectedEyes
+                    = GameManager.Instance.eyesInfo[number].accessory3D;
             }
         }
         else if (currentAccessorType == AccessoriesType.Faces)
@@ -221,6 +229,9 @@ public class SelectionManager : MonoBehaviour
             {
                 selectedFace.enabled = true;
                 selectedFace.sprite = GameManager.Instance.facesInfo[number].accessoryPhoto;
+
+                characterCustomizationPrefsSOs[GameManager.Instance.selectedCharacter].selectedFace
+                    = GameManager.Instance.facesInfo[number].accessory3D;
             }
         }
         else if (currentAccessorType == AccessoriesType.Heads)
@@ -229,6 +240,9 @@ public class SelectionManager : MonoBehaviour
             {
                 selectedHead.enabled = true;
                 selectedHead.sprite = GameManager.Instance.headsInfo[number].accessoryPhoto;
+
+                characterCustomizationPrefsSOs[GameManager.Instance.selectedCharacter].selectedHead
+                    = GameManager.Instance.headsInfo[number].accessory3D;
             }
         }
         else if (currentAccessorType == AccessoriesType.Mouths)
@@ -237,6 +251,9 @@ public class SelectionManager : MonoBehaviour
             {
                 selectedMouth.enabled = true;
                 selectedMouth.sprite = GameManager.Instance.mouthsInfo[number].accessoryPhoto;
+
+                characterCustomizationPrefsSOs[GameManager.Instance.selectedCharacter].selectedMouth
+                    = GameManager.Instance.mouthsInfo[number].accessory3D;
             }
         }
     }
