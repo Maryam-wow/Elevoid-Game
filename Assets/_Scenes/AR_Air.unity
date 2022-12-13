@@ -1710,7 +1710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 1835687726}
+  m_PlanePrefab: {fileID: 1955229777613360282, guid: 6f26c0206d0cf45a5a6d70b037e86e2d,
+    type: 3}
   m_DetectionMode: 1
 --- !u!114 &815710038
 MonoBehaviour:
@@ -3140,12 +3141,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f26c0206d0cf45a5a6d70b037e86e2d, type: 3}
---- !u!1 &1835687726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1955229777613360282, guid: 6f26c0206d0cf45a5a6d70b037e86e2d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1835687725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1882324244
 GameObject:
   m_ObjectHideFlags: 0
