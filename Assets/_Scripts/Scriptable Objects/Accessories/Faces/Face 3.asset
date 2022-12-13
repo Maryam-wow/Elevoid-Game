@@ -15,4 +15,6 @@ MonoBehaviour:
   accessoriesType: 2
   accessoryPhoto: {fileID: 21300000, guid: 70eadd0c0379e05439db2f45b8d48e88, type: 3}
   accessoryUIPhoto: {fileID: 21300000, guid: 5b0dda4bdadb7448f857aec82e321646, type: 3}
+  accessory3D: {fileID: 919132149155446097, guid: 8c155f0f927aa42d7a6b533381106516,
+    type: 3}
   unlocked: 0
