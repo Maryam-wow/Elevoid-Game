@@ -5037,7 +5037,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.7529412}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9664,7 +9664,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _Speed: 4
-  _SplashPrefab: {fileID: 3667645344633002872, guid: 0ad2f89ebfc50bd43a76aea980f28b22,
+  _SplashPrefab: {fileID: 3667645344633002872, guid: 638901efc1db84174b4d64760ebd7115,
     type: 3}
-  _SpillPrefab: {fileID: 4928132487928904063, guid: eae38beb3866d1c4587dbc61b19af031,
+  _SpillPrefab: {fileID: 4928132487928904063, guid: b51bd7b4d84434bb89584f8c7fa5dbe5,
     type: 3}

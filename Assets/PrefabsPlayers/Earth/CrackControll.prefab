@@ -221,7 +221,6 @@ MonoBehaviour:
   _RockEmerge: {fileID: 2657239734783520575}
   _SmallPuffsPrefab: {fileID: 6392793219933641212, guid: e010350a12475904b84cfdc946a96c69,
     type: 3}
-  _CinemachineImpulseSource: {fileID: 5830820099164501359}
   _ImpulseForceSlam: 5
   _ImpulseForceRock: 3
   triggerAttackBehaviour: {fileID: 8927249407982464751}
@@ -341,7 +340,7 @@ PrefabInstance:
     - target: {fileID: 2109109792800623778, guid: bd6d730f7f6867e4ca9976ff420040dc,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2109109792800623791, guid: bd6d730f7f6867e4ca9976ff420040dc,
         type: 3}
