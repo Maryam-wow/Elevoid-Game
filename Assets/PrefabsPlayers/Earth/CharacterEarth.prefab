@@ -10103,7 +10103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &424556476124801432
 Transform:
   m_ObjectHideFlags: 0
@@ -24798,9 +24798,9 @@ MonoBehaviour:
   _RockEmerge: {fileID: 9133373660760446821}
   _SmallPuffsPrefab: {fileID: 6392793219933641212, guid: e010350a12475904b84cfdc946a96c69,
     type: 3}
-  _CinemachineImpulseSource: {fileID: 777733491179801909}
   _ImpulseForceSlam: 5
   _ImpulseForceRock: 3
+  triggerAttackBehaviour: {fileID: 0}
 --- !u!114 &777733491179801909
 MonoBehaviour:
   m_ObjectHideFlags: 0
