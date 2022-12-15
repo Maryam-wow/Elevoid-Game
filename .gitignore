@@ -3,9 +3,11 @@ Logs/
 Temp/
 UserSettings/
 Builds/
+obj/
+
 .idea/
 .vsconfig
+
 *.csproj
 *.sln
 .vs/
-obj/
