@@ -30,6 +30,7 @@ public class ARPlacementIndicator : MonoBehaviour
 
     public Transform GetPlacementIndicatorTransform()
     {
+        // return indicator transform if it's activated (raycast was hit) else return null
         return placementIndicatorObject.activeInHierarchy ? placementIndicatorObject.transform : null;
     }
 
@@ -37,6 +38,7 @@ public class ARPlacementIndicator : MonoBehaviour
     {
         Vector2 screenCenter = new Vector2(Screen.width/2, Screen.height/2);
 
+        // check if the raycast was hit, if it did then save the hits to a variable list
         bool didRaycastHit = _arRaycastManager.Raycast(screenCenter, _arRaycastHits, TrackableType.Planes);
         if (didRaycastHit)
         {
