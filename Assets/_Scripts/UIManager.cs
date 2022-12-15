@@ -133,13 +133,14 @@ public class UIManager : MonoBehaviour
     }
     public void InventoryGameButtonClicked()
     {
+        mainScreen.SetActive(false);
         rewardDailyScreen.SetActive(true);
         selectedCharacterScreen.SetActive(true);
     }
     public void BackToMainButtonClicked()
     {
-        encyclopediaScreen.SetActive(false);
-        quizScreen.SetActive(false);
+        //encyclopediaScreen.SetActive(false);
+        //quizScreen.SetActive(false);
         selectedCharacterScreen.SetActive(false);
         creditsScreen.SetActive(false);
         mainScreen.SetActive(true);
