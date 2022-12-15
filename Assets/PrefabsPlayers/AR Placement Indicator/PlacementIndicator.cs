@@ -1,9 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARKit;
 using UnityEngine.XR.ARSubsystems;
 
 public class PlacementIndicator : MonoBehaviour
