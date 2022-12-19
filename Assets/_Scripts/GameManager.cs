@@ -23,6 +23,7 @@ public class GameManager : GenericSingletonClass<GameManager>
     public List<AccessoryInfo> facesInfo;
     public List<AccessoryInfo> headsInfo;
     public List<AccessoryInfo> mouthsInfo;
+    public List<AccessoryInfo> jewleryInfo;
 
     public int selectedCharacter;
 
@@ -109,7 +110,10 @@ public class GameManager : GenericSingletonClass<GameManager>
         {
             selectedList = mouthsInfo;
         }
-
+        else if (type == AccessoriesType.Jewlery)
+        {
+            selectedList = jewleryInfo;
+        }
 
         for (int i = 0; i < selectedList.Count; i++)
         {

@@ -22,5 +22,6 @@ public enum AccessoriesType
     Eyes = 1,
     Faces = 2,
     Heads = 3,
-    Mouths = 4
+    Mouths = 4,
+    Jewlery = 5
 }

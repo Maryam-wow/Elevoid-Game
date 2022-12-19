@@ -14,6 +14,7 @@ public class SelectionManager : MonoBehaviour
     public Image selectedFace;
     public Image selectedHead;
     public Image selectedMouth;
+    public Image selectedJewlery;
 
 
     public Button waterTab;
@@ -26,6 +27,7 @@ public class SelectionManager : MonoBehaviour
     public Button facesTab;
     public Button headsTab;
     public Button mouthsTab;
+    public Button jewleryTab;
 
     public List<Button> selectionButtons;
 
@@ -58,6 +60,7 @@ public class SelectionManager : MonoBehaviour
         facesTab.onClick.AddListener(delegate { AccessoriesTabSelected(AccessoriesType.Faces); });
         headsTab.onClick.AddListener(delegate { AccessoriesTabSelected(AccessoriesType.Heads); });
         mouthsTab.onClick.AddListener(delegate { AccessoriesTabSelected(AccessoriesType.Mouths); });
+        jewleryTab.onClick.AddListener(delegate { AccessoriesTabSelected(AccessoriesType.Jewlery); });
 
         for (int i = 0; i < selectionButtons.Count; i++)
         {
@@ -254,6 +257,17 @@ public class SelectionManager : MonoBehaviour
 
                 characterCustomizationPrefsSOs[GameManager.Instance.selectedCharacter].selectedMouth
                     = GameManager.Instance.mouthsInfo[number].accessory3D;
+            }
+        }
+        else if (currentAccessorType == AccessoriesType.Jewlery)
+        {
+            if (GameManager.Instance.jewleryInfo[number].unlocked)
+            {
+                selectedJewlery.enabled = true;
+                selectedJewlery.sprite = GameManager.Instance.jewleryInfo[number].accessoryPhoto;
+
+                characterCustomizationPrefsSOs[GameManager.Instance.selectedCharacter].selectedJewlery
+                    = GameManager.Instance.jewleryInfo[number].accessory3D;
             }
         }
     }

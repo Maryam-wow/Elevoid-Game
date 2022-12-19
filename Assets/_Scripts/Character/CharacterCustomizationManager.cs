@@ -10,7 +10,7 @@ public class CharacterCustomizationManager : MonoBehaviour
     [SerializeField] private Transform faceParent;
     [SerializeField] private Transform headParent;
     [SerializeField] private Transform mouthParent;
-
+    [SerializeField] private Transform jewleryParent;
     // or we can use Start()
     private void Awake()
     {
@@ -27,5 +27,7 @@ public class CharacterCustomizationManager : MonoBehaviour
             Instantiate(customizationPrefs.selectedHead, headParent).transform.localPosition = Vector3.zero;
         if (customizationPrefs.selectedMouth != null)
             Instantiate(customizationPrefs.selectedMouth, mouthParent).transform.localPosition = Vector3.zero;
+        if (customizationPrefs.selectedJewlery != null)
+            Instantiate(customizationPrefs.selectedJewlery, jewleryParent).transform.localPosition = Vector3.zero;
     }
 }

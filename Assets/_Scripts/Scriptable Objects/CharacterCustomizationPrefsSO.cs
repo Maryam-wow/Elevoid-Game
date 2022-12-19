@@ -8,4 +8,5 @@ public class CharacterCustomizationPrefsSO : ScriptableObject
     public GameObject selectedFace;
     public GameObject selectedHead;
     public GameObject selectedMouth;
+    public GameObject selectedJewlery;
 }

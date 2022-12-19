@@ -24,7 +24,9 @@ public class CharacterCustomizationButton : MonoBehaviour
             case AccessoriesType.Mouths:
                 prefs.selectedMouth = accessoryInfoSO.accessory3D;
                 break;
-            
+            case AccessoriesType.Jewlery:
+                prefs.selectedJewlery = accessoryInfoSO.accessory3D;
+                break;
             default:
                 return;
         }

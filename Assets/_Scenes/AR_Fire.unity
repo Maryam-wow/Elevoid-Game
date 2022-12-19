@@ -2412,6 +2412,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed84e7d866844f14d8e4301151fe17f2, type: 2}
   mouthsInfo:
   - {fileID: 11400000, guid: 0f20d765e662a1143be0e83ede0ebad7, type: 2}
+  jewleryInfo: []
   selectedCharacter: 0
   rewardsList:
   - {fileID: 11400000, guid: 7de0da1877907814185be9a931adab1e, type: 2}
@@ -8408,7 +8409,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f1f08d97080a74f23bb37c0c1b38d2c4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.18
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1f08d97080a74f23bb37c0c1b38d2c4,
         type: 3}
@@ -8758,11 +8759,21 @@ PrefabInstance:
       propertyPath: looping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4851441373935694841, guid: c5b860e07aba84696b4c1d0d9e1228ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5523450960031027981, guid: c5b860e07aba84696b4c1d0d9e1228ec,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6654330744777787496, guid: c5b860e07aba84696b4c1d0d9e1228ec,
+        type: 3}
+      propertyPath: jewleryParent
+      value: 
+      objectReference: {fileID: 2041540015}
     - target: {fileID: 6761211132873950230, guid: c5b860e07aba84696b4c1d0d9e1228ec,
         type: 3}
       propertyPath: m_Name
@@ -8786,7 +8797,7 @@ PrefabInstance:
     - target: {fileID: 7775569539922550040, guid: c5b860e07aba84696b4c1d0d9e1228ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 7775569539922550040, guid: c5b860e07aba84696b4c1d0d9e1228ec,
         type: 3}
@@ -8796,7 +8807,7 @@ PrefabInstance:
     - target: {fileID: 7775569539922550040, guid: c5b860e07aba84696b4c1d0d9e1228ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.04
       objectReference: {fileID: 0}
     - target: {fileID: 7775569539922550040, guid: c5b860e07aba84696b4c1d0d9e1228ec,
         type: 3}
@@ -8908,6 +8919,12 @@ PrefabInstance:
     - {fileID: 3169944763606118906, guid: c5b860e07aba84696b4c1d0d9e1228ec, type: 3}
     - {fileID: 8369219933379105194, guid: c5b860e07aba84696b4c1d0d9e1228ec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5b860e07aba84696b4c1d0d9e1228ec, type: 3}
+--- !u!4 &2041540015 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4851441373935694841, guid: c5b860e07aba84696b4c1d0d9e1228ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 2041540014}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2109319324
 GameObject:
   m_ObjectHideFlags: 0

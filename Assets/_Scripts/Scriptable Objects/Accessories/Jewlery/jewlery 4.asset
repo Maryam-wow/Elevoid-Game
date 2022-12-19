@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1c0223a5e703114bb6c4fed7c6d9e43, type: 3}
-  m_Name: Face 3
+  m_Name: jewlery 4
   m_EditorClassIdentifier: 
-  accessoriesType: 2
-  accessoryPhoto: {fileID: 21300000, guid: 70eadd0c0379e05439db2f45b8d48e88, type: 3}
-  accessoryUIPhoto: {fileID: 21300000, guid: 5b0dda4bdadb7448f857aec82e321646, type: 3}
-  accessory3D: {fileID: 919132149155446097, guid: 8c155f0f927aa42d7a6b533381106516,
+  accessoriesType: 5
+  accessoryPhoto: {fileID: 21300000, guid: 81f1f21e3c6db8c429618d9fba58b0ab, type: 3}
+  accessoryUIPhoto: {fileID: 21300000, guid: 459087d1e65744b2382250da2c904b5a, type: 3}
+  accessory3D: {fileID: 919132149155446097, guid: 96206196a9b1b472d80965ad4b8a3fb3,
     type: 3}
   unlocked: 1
