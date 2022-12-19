@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/Main.unity
     guid: 08f5272cee1991a429ca0a022a88614b
   - enabled: 0
     path: Assets/_Scenes/NonAR_Water.unity
     guid: 78bea6b9a11754866812dc4e8e420192
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/AR_Fire.unity
     guid: d1bf364c333e64b6bae753aafc6a42c2
   - enabled: 1
     path: Assets/_Scenes/AR_Air.unity
     guid: 125d927c9129341498dd87cad66638bb
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/AR_Earth.unity
     guid: dba2033d295254fea8f904af6fafb5ca
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Scenes/AR_Water.unity
     guid: b1a9f2fb53c9e4a7fa1c0d5db89e6b2c
   m_configObjects:

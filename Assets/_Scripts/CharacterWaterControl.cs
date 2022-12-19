@@ -46,7 +46,7 @@ public class CharacterWaterControl : MonoBehaviour
                 {
                     yield return StartCoroutine(Coroutine_Turn());
                     _Anim.SetTrigger("CreateWaterBall");
-                    gameObject.GetComponent<AudioSource>().Play();
+                    //gameObject.GetComponent<AudioSource>().Play();
 
                     }
                 else

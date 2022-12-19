@@ -8265,7 +8265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee18dc73c32b3417a98949ab49f1e880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 10
   particleSystem: {fileID: 202662855}
   attackDuration: 1.5
 --- !u!1001 &1753363448
@@ -8275,6 +8275,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1363350721269085101, guid: 6f26c0206d0cf45a5a6d70b037e86e2d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1955229777613360282, guid: 6f26c0206d0cf45a5a6d70b037e86e2d,
         type: 3}
       propertyPath: m_Name
@@ -8357,12 +8362,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f26c0206d0cf45a5a6d70b037e86e2d, type: 3}
---- !u!1 &1753363449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1955229777613360282, guid: 6f26c0206d0cf45a5a6d70b037e86e2d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1753363448}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1833059182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1f08d97080a74f23bb37c0c1b38d2c4,
@@ -8940,7 +8939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 1753363449}
+  m_PlanePrefab: {fileID: 0}
   m_DetectionMode: 1
 --- !u!114 &2109319326
 MonoBehaviour:
